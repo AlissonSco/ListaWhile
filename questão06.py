@@ -1,14 +1,14 @@
 import random
-num = random.randint(1,9)
-nn = int(input('Tente adivinhar o numero de 1 a 9! '))
+num = random.randint(1, 9)
+nn = input('Tente adivinhar o número de 1 a 9! ')
 print('Digite sair se quiser sair')
-while nn != num:
-    if nn > num:
-        print('O numero que voce digitou e maior: ')
-        nn = int('Tente adivinhar o numero novamente: ')
-    elif nn < num:
-        print('O numero que voce digitou e menor')
-        nn = int(input('Tente adivinhar o numero novamente: '))
-    else:
-        print('FIM DO JOGO')
+while nn != str(num):
+    if nn == 'sair':
+        break
+    if int(nn) > num:
+        print('O número que você digitou é maior: ')
+    elif int(nn) < num:
+        print('O número que você digitou é menor')
+    nn = input('Tente adivinhar o número novamente: ')
+print('Finalizado')
 print('Parabéns')
